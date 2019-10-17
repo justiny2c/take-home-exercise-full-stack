@@ -5,11 +5,12 @@
   "dependencies": {
     "axios": "0.19.0",
     "express": "4.17.1",
+    "knex": "^0.19.5",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "3.0.1",
-    "sequelize": "5.8.8",
-    "sqlite3": "4.1.8"
+    "sequelize": "^6.0.0",
+    "sqlite3": "^4.1.0"
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
@@ -42,7 +43,19 @@
   },
   "proxy": "http://localhost:3001",
   "engines": {
-      "node": ">=10.16.3"
+    "node": ">=10.16.3"
   },
-  "engineStrict": true
+  "engineStrict": true,
+  "description": "💫 Welcome to the Matter take-home coding exercise! 🎉",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justiny2c/take-home-exercise-full-stack.git"
+  },
+  "author": "justin chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justiny2c/take-home-exercise-full-stack/issues"
+  },
+  "homepage": "https://github.com/justiny2c/take-home-exercise-full-stack#readme"
 }
