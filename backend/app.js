@@ -8,4 +8,10 @@ app.get('/team', async (req, res, next) => {
   return res.json(team);
 });
 
+app.post('/team', async (req, res, next) => {
+  const newMember = req.body;
+  TeamMember.create(newMember);
+  return res.json(newMember);
+});
+
 module.exports = app;
