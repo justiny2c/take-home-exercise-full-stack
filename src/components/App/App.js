@@ -35,8 +35,9 @@ class App extends React.Component {
   }
 
   toggle = e => {
-    let x = document.getElementsByClassName('form');
-    x.display === 'None' ? (x.display = 'Block') : (x.display = 'None');
+    if (document.getElementById('form-id').className == 'form')
+      document.getElementById('form-id').className = 'form-show';
+    else document.getElementById('form-id').className = 'form';
   };
 
   handleChange = e => {
@@ -96,7 +97,7 @@ class App extends React.Component {
           }
           title='New Teammate'
           story={
-            <div className='form'>
+            <div id='form-id' className='form'>
               <p>Fill out form below: </p>
               <form className='input-form'>
                 <input

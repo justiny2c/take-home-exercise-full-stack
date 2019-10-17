@@ -62,4 +62,6 @@ input {
   display: None;
 }
 
-
+.form-show {
+  display: Block;
+}
