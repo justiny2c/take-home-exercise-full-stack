@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   toggle = e => {
-    if (document.getElementById('form-id').className == 'form')
+    if (document.getElementById('form-id').className === 'form')
       document.getElementById('form-id').className = 'form-show';
     else document.getElementById('form-id').className = 'form';
   };
@@ -51,11 +51,13 @@ class App extends React.Component {
     e.preventDefault();
     let creds = this.state.form;
     axios
-      .post(`/team`, creds)
+      .post(`http://localhost:3001/team`, creds)
       .then(res => {
+        console.log('POST', res.data);
         return res.data;
       })
       .catch(err => {
+        console.log('Failed');
         return err.response;
       });
 
@@ -124,10 +126,11 @@ class App extends React.Component {
                   onChange={this.handleChange}
                 />{' '}
                 <br />
-                <input
+                <textarea
                   type='text'
                   name='story'
                   placeholder='Story'
+                  className='story-input'
                   value={this.state.form.story}
                   onChange={this.handleChange}
                 />{' '}

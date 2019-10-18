@@ -51,11 +51,14 @@
 input {
   padding: 10px;
   margin: 2px;
+  border: 1px solid rgb(155, 155, 155);
 }
 
 .submit {
   border-radius: 5px;
+  padding: 5px;
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .form {
@@ -64,4 +67,12 @@ input {
 
 .form-show {
   display: Block;
+}
+
+.story-input {
+  height: 150px;
+  /* padding: 5.5px; */
+  margin-top: 3px;
+  padding: 5px;
+  border: 1px solid rgb(155, 155, 155);
 }
